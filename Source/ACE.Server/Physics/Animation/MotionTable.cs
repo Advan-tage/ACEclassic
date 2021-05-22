@@ -456,9 +456,9 @@ namespace ACE.Server.Physics.Animation
             }
         }
 
-        private static readonly List<float> emptyList = new List<float>();
+        private static readonly List<(float, AttackHook)> emptyList = new List<(float, AttackHook)>();
 
-        public static List<float> GetAttackFrames(uint motionTableId, MotionStance stance, MotionCommand motion)
+        public static List<(float time, AttackHook attackHook)> GetAttackFrames(uint motionTableId, MotionStance stance, MotionCommand motion)
         {
             if (motionTableId == 0) return emptyList;
 
